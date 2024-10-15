@@ -27,8 +27,8 @@
   position: absolute;
   top: 5%;
   left: 5%;
-  width: 20vw; /* Use viewport width for responsive scaling */
-  max-width: 300px; /* Set max width for larger screens */
+  width: 20vw;
+  max-width: 300px;
 }
 
 #Scorecard details summary {
@@ -50,6 +50,16 @@
   margin-bottom: 20px;
 }
 
+/* Wrapper to hold the option-wrapper and result side by side */
+#game-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
 /* Option wrapper for player choices */
 #option-wrapper {
   border: 2px solid black;
@@ -57,9 +67,8 @@
   padding: 2vw;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 80%;
-  max-width: 600px;
-  margin-bottom: 20px;
+  width: 45%; /* Take half of the container width */
+  margin-right: 20px;
 }
 
 #heading {
@@ -119,7 +128,12 @@
 }
 
 #result {
-  margin-top: 2rem;
+  width: 45%; /* Takes the other half of the container width */
+  padding: 2vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
 }
 
 #Game, #Player, #Computer, #res {
@@ -146,8 +160,14 @@
       font-size: 5vw;
   }
 
-  #option-wrapper {
-      width: 90%;
+  #game-container {
+      flex-direction: column; /* Stack them vertically on smaller screens */
+  }
+
+  #option-wrapper,
+  #result {
+      width: 90%; /* Make both divs full width on smaller screens */
+      margin-bottom: 20px;
   }
 
   #opt-img {
