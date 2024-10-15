@@ -6,38 +6,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="back">
-<div id="Scorecard">
-<details>
-    <summary>ScoreCard</summary>
-    <p id="player-score">Player Score: 0</p>
-    <p id="computer-score">Computer Score: 0</p>
-</details>
-</div>
-<h1 id="main-heading">Stone , Paper & Scissor </h1>
-<div id="option-wrapper">
-    <h2 id="heading">Player Need to choose from the below option:</h2>
-    <div id="images">
-    <div class="option">
-        <img  id="opt-img" src="stone.jpg" alt="stone pic"><br>
-        <button class="button-17" onclick="selected_stone()">Stone</button>
+    <div id="Scorecard">
+        <details>
+            <summary>ScoreCard</summary>
+            <p id="player-score">Player Score: 0</p>
+            <p id="computer-score">Computer Score: 0</p>
+        </details>
     </div>
-    <div class="option">
-        <img id="opt-img" src="paper.jpg" alt="paper pic"><br>
-        <button class="button-17" onclick="selected_paper()">Paper</button>
+
+    <h1 id="main-heading">Stone , Paper & Scissor </h1>
+
+    <!-- Container for option and result, side by side -->
+    <div id="game-container">
+        <!-- Player option wrapper -->
+        <div id="option-wrapper">
+            <h2 id="heading">Player Need to choose from the below option:</h2>
+            <div id="images">
+                <div class="option">
+                    <img id="opt-img" src="stone.jpg" alt="stone pic"><br>
+                    <button class="button-17" onclick="selected_stone()">Stone</button>
+                </div>
+                <div class="option">
+                    <img id="opt-img" src="paper.jpg" alt="paper pic"><br>
+                    <button class="button-17" onclick="selected_paper()">Paper</button>
+                </div>
+                <div class="option">
+                    <img id="opt-img" src="scissor.jpg" alt="scissor pic"><br>
+                    <button class="button-17" onclick="selected_scissor()">Scissor</button>
+                </div> 
+            </div>
+        </div>
+
+        <!-- Result section -->
+        <div id="result">
+            <h2 id="Game"></h2><br>
+            <h4 id="Player"></h4>
+            <h4 id="Computer"></h4>
+            <center><img id="res-img" src=""></center><br>
+            <h2 id="res"></h2>
+        </div>
     </div>
-    <div class="option">
-        <img id="opt-img" src="scissor.jpg" alt="scissor pic"><br>
-        <button class="button-17" onclick="selected_scissor()">Scissor</button>
-    </div> 
-</div>
-</div>
-<div id="result">
-    <h2 id="Game"></h2><br>
-    <h4 id="Player"></h4>
-    <h4 id="Computer"></h4>
-    <center><img id="res-img" src=""></center><br>
-    <h2 id="res"></h2>
-</div>
 </body>
 <script src="script.js"></script>
 </html>
